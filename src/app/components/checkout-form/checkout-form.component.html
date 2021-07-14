@@ -1,2 +1,15 @@
-<p>checkout-form works!</p>
-<a [routerLink]="['/confirmation/']">Confirmation</a>
+<form class="costumer_form" #formCostumer="ngForm" (ngSubmit)="onSubmitHandler()">
+  <h2>Costumer account</h2>
+  <label for="fullname">Full name</label>
+  <input class="data-input" type="text" name="fullname" [(ngModel)]="fullname" #costumerName="ngModel" required minlength="2" placeholder="minimum 2 characters" >
+  <label for="email">Email</label>
+  <input class="data-input" type="email" name="email" [(ngModel)]="email" #costumerEmail="ngModel" required email placeholder="costumer@store.com">
+  <label for="card">Card</label>
+  <input class="data-input" type="text" name="card" [(ngModel)]="cc" #costumerCard="ngModel" required pattern="[0-9]{16}" placeholder="16 digits" >
+  <label for="adresse">Adresse</label>
+  <input class="data-input" type="text" name="adresse" [(ngModel)]="adresse" #costumerAdresse="ngModel" required minlength="8" placeholder="minimum 8 characters" >
+  <button class="button-input" type="submit" [disabled]="formCostumer.invalid" >Confirmation</button>
+  <div *ngIf="costumerName.invalid || costumerEmail.invalid || costumerCard.invalid || costumerAdresse.invalid">
+    Please provide all your information.
+  </div>
+</form>

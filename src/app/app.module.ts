@@ -11,6 +11,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
