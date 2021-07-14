@@ -1,0 +1,6 @@
+.product-image {
+  height: 300px;
+  max-width: 200px;
+  justify-self: flex-start;
+  border-radius: 4px 4px 0 0;
+}

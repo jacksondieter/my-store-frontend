@@ -1,2 +1,8 @@
-<p>product-list works!</p>
-<app-product-item></app-product-item>
+<div class="card-container">
+  <app-product-item 
+    *ngFor="let productItem of products" 
+    [product]="productItem"
+    (addCart)="addCardHandler($event)"
+    class="card">
+  </app-product-item>
+</div>
