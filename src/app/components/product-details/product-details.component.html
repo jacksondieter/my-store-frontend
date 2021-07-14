@@ -1,1 +1,13 @@
-<p>product-details works!</p>
+<div class="detail-container">  
+  <img src="{{product.url}}" alt="" >
+  <div class="detail-item">{{product.name}}</div>
+  <div class="detail-item">{{product.price}}</div>
+  <div class="detail-item">{{product.description}}</div>
+  <!-- <div> -->
+    <button (click)="downQuantity()">-</button>
+    {{quantity}}
+    <button (click)="upQuantity()">+</button>
+  <!-- </div> -->
+  <button (click)="addCart()" class="cart-button">Add cart</button>
+  <button (click)="onCloseHandler()" class="back-link">x</button>
+</div>
