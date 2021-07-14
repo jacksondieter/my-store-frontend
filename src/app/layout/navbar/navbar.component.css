@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:visited {
+  color: #ffffff;
+}
+
+.item {
+  margin: 2em;
+}
+
+.cart-label {
+  color: gold;
+}

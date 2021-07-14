@@ -1,5 +1,8 @@
-<p>navbar works!</p>
 <nav>
-  <a [routerLink]="['/']">home</a>
-  <a [routerLink]="['/cart/']">Cart</a>
+  <div class="item">
+    <a [routerLink]="['/']">Home</a>
+  </div>  
+  <div class="item">
+    <a [routerLink]="['/cart/']">Cart [<span class="cart-label">{{cartItems}}</span>] </a>
+  </div>  
 </nav>
