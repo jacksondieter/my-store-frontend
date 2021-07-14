@@ -1,2 +1,2 @@
-<p>order-confirmation works!</p>
-<a [routerLink]="['/']">Close</a>
+<p>{{msg}}</p>
+<button (click)="onCloseHandler()" >{{status === 'success'? 'Close': 'Back'}}</button>

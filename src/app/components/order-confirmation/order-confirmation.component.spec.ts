@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { OrderConfirmationComponent } from './order-confirmation.component';
 
@@ -8,7 +10,14 @@ describe('OrderConfirmationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrderConfirmationComponent ]
+      imports: [RouterTestingModule],
+      declarations: [ OrderConfirmationComponent ],
+      providers:[{
+        provide: ActivatedRoute,
+        useValue: {
+          snapshot: { params: { status: 'success' } }
+        }
+      }]
     })
     .compileComponents();
   });
