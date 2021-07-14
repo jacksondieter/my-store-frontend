@@ -1,2 +1,15 @@
-<p>shopping-cart works!</p>
-<a [routerLink]="['/checkout/']">Checkout</a>
+<div *ngFor="let product of cart" class="cart-container">
+  <span class="cart-item">{{product.name}}</span>
+  <span class="cart-item">{{product.price}}</span>
+  <div>
+    <button (click)="downQuantity(product.id)">-</button>
+    <span>{{product.quantity}}</span>
+    <button (click)="upQuantity(product.id)">+</button>
+    <button (click)="deleteFromCart(product.id)">x</button> 
+  </div>   
+</div>
+<div class="cart-container-total">
+  <div class="cart-item">{{quantity}}</div>
+  <div class="cart-item">{{total}}</div>
+  <button (click)="onCheckoutHandler()" [disabled]="cart.length === 0" class="cart-item">Checkout</button>
+</div>
