@@ -2,6 +2,9 @@
 
 This is an e-commerce website – an application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
 
+## Getting Started
+To get started, clone this repo and run `yarn` in your terminal at the project root.
+
 ## Development server
 
 Run `yarn start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
